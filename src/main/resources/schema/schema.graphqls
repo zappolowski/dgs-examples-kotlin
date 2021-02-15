@@ -1,5 +1,10 @@
 type Query {
     shows(titleFilter: String): [Show]
+    color(filter: ColorFilter!): String!
+}
+
+input ColorFilter {
+    color: String = "red"
 }
 
 type Mutation {
